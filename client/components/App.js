@@ -7,11 +7,11 @@ class App extends React.Component {
           <VideoPlayer/>
         </div>
         <div className="col-md-5">
-          <VideoList entries={this.props.entries} />
+          <VideoList entries={exampleVideoData} />
         </div>
       </div>
     );
   }
 }
 
-ReactDOM.render(<App entries={window.exampleVideoData}/>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

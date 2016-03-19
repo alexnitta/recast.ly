@@ -7,8 +7,8 @@ class VideoList extends React.Component {
   render() {
     return (
       <div className="video-list media">
-        {props.entries.map(entry => 
-          <VideoListEntry entries={entry}/>    
+        {this.props.entries.map(entry => 
+          <VideoListEntry entries={entry} />    
         )}
       </div>
     );

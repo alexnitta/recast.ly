@@ -21,5 +21,5 @@ class VideoListEntry extends React.Component {
   }
 }
 
-
 window.VideoListEntry = VideoListEntry;
+
