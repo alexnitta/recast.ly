@@ -6,6 +6,11 @@ class VideoListEntry extends React.Component {
     super(props);
   }
 
+  handleClick(video) {
+    {/* pass ID to App State*/}
+    
+  }
+
   render() {
     return (
       <div className="video-list-entry">
@@ -13,7 +18,7 @@ class VideoListEntry extends React.Component {
           <img className="media-object" src={this.props.entries.snippet.thumbnails.default.url} alt="" />
         </div>
         <div className="media-body">
-          <div className="video-list-entry-title">{this.props.entries.snippet.title}</div>
+          <div className="video-list-entry-title" onClick={this.handleClick.bind(this)}>{this.props.entries.snippet.title}</div>
           <div className="video-list-entry-detail">{this.props.entries.snippet.description}</div>
         </div>
       </div>
@@ -22,4 +27,6 @@ class VideoListEntry extends React.Component {
 }
 
 window.VideoListEntry = VideoListEntry;
+
+
 

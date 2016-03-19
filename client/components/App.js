@@ -1,4 +1,20 @@
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      {/*current state has video ID, and exampleVideoData*/}
+      currentVideo: '4ZAEBxGipoA',
+      allVideos: {exampleVideoData}
+    }
+  }
+
+  handleClick() {
+    this.setState({
+      currentVideo: {/*get video somehow*/}
+    });
+  }
+
   render() { 
     return (
       <div>
