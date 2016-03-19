@@ -7,8 +7,9 @@ class VideoListEntry extends React.Component {
   }
 
   handleClick(video) {
-    {/* pass ID to App State*/}
-    
+    console.log('handleClick on VideoListEntry logs: ' +video);
+    /* pass ID to VideoList*/
+    // call App's setNewVideo function from here
   }
 
   render() {
@@ -18,7 +19,7 @@ class VideoListEntry extends React.Component {
           <img className="media-object" src={this.props.entries.snippet.thumbnails.default.url} alt="" />
         </div>
         <div className="media-body">
-          <div className="video-list-entry-title" onClick={this.handleClick.bind(this)}>{this.props.entries.snippet.title}</div>
+          <div className="video-list-entry-title" onClick={this.handleClick(this.props.entries.id.videoId)}>{this.props.entries.snippet.title}</div>
           <div className="video-list-entry-detail">{this.props.entries.snippet.description}</div>
         </div>
       </div>

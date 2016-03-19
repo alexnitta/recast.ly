@@ -3,15 +3,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      {/*current state has video ID, and exampleVideoData*/}
       currentVideo: '4ZAEBxGipoA',
       allVideos: {exampleVideoData}
-    }
+    };
   }
 
-  handleClick() {
+  setNewVideo(videoId) {
     this.setState({
-      currentVideo: {/*get video somehow*/}
+      currentVideo: {videoId}
     });
   }
 
