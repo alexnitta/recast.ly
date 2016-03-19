@@ -7,6 +7,7 @@ class VideoList extends React.Component {
   render() {
     return (
       <div className="video-list media">
+        {/* maps elements from exampleVideoData to VideoList props */} 
         {this.props.entries.map(entry => 
           <VideoListEntry entries={entry} />    
         )}
