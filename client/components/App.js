@@ -3,14 +3,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentVideo: '4ZAEBxGipoA',
-      allVideos: {exampleVideoData}
+      currentVideo: exampleVideoData[0],
+      allVideos: exampleVideoData
     };
   }
 
-  setNewVideo(videoId) {
+  setNewVideo(video) {
     this.setState({
-      currentVideo: {videoId}
+      currentVideo: video
     });
   }
 
@@ -19,10 +19,13 @@ class App extends React.Component {
       <div>
         <Nav />
         <div className="col-md-7">
-          <VideoPlayer entry={exampleVideoData[0]} />
+          <VideoPlayer entry={this.state.currentVideo} />
         </div>
         <div className="col-md-5">
-          <VideoList entries={exampleVideoData} />
+          <VideoList 
+            entries={this.state.allVideos} 
+            setNewVideo={this.setNewVideo.bind(this)}
+          />
         </div>
       </div>
     );
