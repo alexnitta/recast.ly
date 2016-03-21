@@ -1,14 +1,15 @@
-var VideoList = (props) => {
-  var videoListEntries = props.entries.map((entry) => 
+var VideoList = ({entries, setNewVideo}) => {
+  console.log(entries);
+  var videoListEntries = entries.map((entry) => 
     <VideoListEntry 
       entry={entry} 
-      setNewVideo={props.setNewVideo}
+      setNewVideo={setNewVideo}
     />    
   );  
 
   return (
     <div className="video-list media">
-    {videoListEntries}
+      {videoListEntries}
     </div>
   );
 };  

@@ -7,7 +7,26 @@ class App extends React.Component {
       allVideos: exampleVideoData
     };
   }
-
+  
+  componentDidMount() {
+    this.getYouTubeVideos('ida red');
+  }
+  
+  getYouTubeVideos(query) {  
+    var options = {
+      query: query,
+      max: 8,
+      key: YOUTUBE_API_KEY
+    };
+    
+    searchYouTube(options, videos => 
+      this.setState({
+        currentVideo: videos[0],
+        allVideos: videos
+      })
+    ); 
+  }
+  
   setNewVideo(video) {
     this.setState({
       currentVideo: video
